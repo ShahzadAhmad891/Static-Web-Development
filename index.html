@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahzad's Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Animation Library (Optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        footer a {
+            color: #007bff;
+            /* Blue color for icons */
+            margin: 0 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #0056b3;
+            /* Darker blue on hover */
+        }
+
+        footer p {
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= Navbar ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-4 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shahzad Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ Carousel Section (Fade) with My Photo ================= -->
+
+    <style>
+        /* Make carousel images full-width and uniform */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+
+        /* Profile picture overlay */
+        .profile-overlay {
+            position: absolute;
+            bottom: 20px;
+            /* distance from bottom */
+            left: 20px;
+            /* distance from left */
+            z-index: 10;
+            /* above the slide image */
+        }
+
+        /* Style for profile image */
+        .profile-overlay img {
+            width: 150px;
+            /* size of the profile picture */
+            height: 150px;
+            border-radius: 50%;
+            /* makes it circular */
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Optional: fade-in effect */
+        .profile-overlay img:hover {
+            transform: scale(1.1);
+            transition: 0.1s ease;
+        }
+    </style>
+
+
+
+
+    <div id="myCarousel" class="carousel slide" mt-5 data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+
+            <!-- ====== Slide 1 ====== -->
+            <div class="carousel-item active position-relative">
+                <img src="Images/img1.jpg" class="d-block w-100" alt="Project 1">
+                <!-- Your picture overlay -->
+                <div class="profile-overlay">
+                    <img src="MyPhoto/Shahzad Pic.jpg" alt="My Photo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>My Portfolio</h5>
+                    <p>Web Development. </p>
+                </div>
+            </div>
+
+            <!-- ====== Slide 2 ====== -->
+            <div class="carousel-item position-relative">
+                <img src="Images/img2.jpg" class="d-block w-100" alt="Project 2">
+                <div class="profile-overlay">
+                    <img src="MyPhoto/Shahzad Pic.jpg" alt="My Photo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>My Portfolio</h5>
+                    <p>Static Web Development.</p>
+                </div>
+            </div>
+
+            <!-- ====== Slide 3 ====== -->
+            <div class="carousel-item position-relative">
+                <img src="Images/img3.jpg" class="d-block w-100" alt="Project 3">
+                <div class="profile-overlay">
+                    <img src="MyPhoto/Shahzad Pic.jpg" alt="My Photo">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>My Portfolio</h5>
+                    <p>Dynamic Web Development.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <hr>
+    </hr>
+
+
+    <!-- ================= Hero Section with My Picture Revolving ================= -->
+    <section id="home"
+        class="vh-70 d-flex align-items-center justify-content-center text-center bg-primary text-white position-relative pt-3">
+
+        <!-- 👇 Your picture with rotation animation -->
+        <img src="MyPhoto/Shahzad Pic.jpg" alt="Shahzad Ahmad"
+            class="position-absolute start-0 mb-1 ms-2 rounded-circle shadow rotating"
+            style="width: 150px; height: 130px; object-fit: cover; border: 3px solid white; bottom: 20px;">
+
+        <div>
+            <h1>Hi, I'm Shahzad Ahmad</h1>
+            <p>Web Developer | UI/UX Enthusiast</p>
+            <a href="#projects" class="btn btn-light btn-lg mt-3 mb-4">View My Work</a>
+        </div>
+    </section>
+
+    <!-- 👇 CSS to make the image revolve continuously -->
+    <style>
+        /* 🔁 Revolving (rotation) animation */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 🔁 Apply rotation to your picture */
+        .rotating {
+            animation: spin 10s linear infinite;
+            /* 6 seconds per full rotation */
+            transform-origin: center;
+            /* rotate around center of the image */
+        }
+    </style>
+
+    <!-- ================= About Section ================= -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="Images/img4.jpg" alt="Profile" class="img-fluid rounded-circle mb-3">
+                </div>
+                <div class="col-md-8">
+                    <p>Hello! I'm a passionate web developer with skills in creating responsive and interactive websites
+                        using Bootstrap and JavaScript. I enjoy solving problems and learning new technologies.</p>
+
+                    <!-- Skill Bars -->
+                    <h5 class="mt-4">Skills</h5>
+                    <div class="mb-2">HTML <span class="float-end">90%</span></div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                    </div>
+                    <div class="mb-2">CSS <span class="float-end">85%</span></div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div>
+                    </div>
+                    <div class="mb-2">JavaScript <span class="float-end">75%</span></div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+                    </div>
+                    <div class="mb-2">Bootstrap <span class="float-end">80%</span></div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Projects Section ================= -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">My Projects</h2>
+
+            <!-- Project Filter (Optional) -->
+            <div class="text-center mb-4">
+                <button id="ForFocus" class="btn btn-outline-primary me-2 filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-primary me-2 filter-btn" data-filter="web">Web</button>
+                <button class="btn btn-outline-primary me-2 filter-btn" data-filter="ui">UI/UX</button>
+            </div>
+
+
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-4 project-card" data-category="web">
+                    <div class="card">
+                        <img src="Cards/card1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project One</h5>
+                            <p class="card-text">A responsive website using Bootstrap and JS animations.</p>
+                            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-4 project-card" data-category="ui">
+                    <div class="card">
+                        <img src="Cards/card2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Two</h5>
+                            <p class="card-text">UI/UX design project with interactive elements.</p>
+                            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-4 project-card" data-category="web">
+                    <div class="card">
+                        <img src="Cards/card3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Three</h5>
+                            <p class="card-text">JavaScript based interactive website.</p>
+                            <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <style>
+        .card-img-top {
+            height: 225px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+    <style>
+        .card {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+
+    <!-- ================= Contact Section ================= -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <p id="formMessage" class="mt-3 text-success"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="border-top pt-2">
+        <p>Connect with me:</p>
+
+        <!-- Corrected Social Media Icons -->
+        <a href="https://twitter.com/YourUsername" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.facebook.com/shahzad.ahmad.5855594" target="_blank"><i
+                class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://github.com/ShahzadAhmad891/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+
+        <p>&copy; 2025 Shahzad Ahmad</p>
+    </footer>
+
+    <!-- ================= JS Scripts ================= -->
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init();
+
+        // ================= Smooth Scroll =================
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ================= Project Filter =================
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ================= Contact Form Validation =================
+        const form = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Basic validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name && email && message) {
+                formMessage.textContent = "Message sent successfully!";
+                form.reset();
+            } else {
+                formMessage.textContent = "Please fill all fields.";
+                formMessage.classList.remove('text-success');
+                formMessage.classList.add('text-danger');
+            }
+        });
+    </script>
+</body>
+
+</html>
